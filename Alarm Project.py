@@ -1,4 +1,5 @@
 from datetime import datetime   
+from playsound import playsound #import alarm sound from the downloaded source
 alarm_time = input("Enter the time of alarm to be set:HH:MM:SS\n")
 alarm_hour=alarm_time[0:2]
 alarm_minute=alarm_time[3:5]
@@ -16,5 +17,6 @@ while True:
             if(alarm_minute==current_minute):
                 if(alarm_seconds==current_seconds):
                     print("Wake Up!")
+                    playsound('audio.mp3') # Any type of alarm sound you download from source
                     break
                 
